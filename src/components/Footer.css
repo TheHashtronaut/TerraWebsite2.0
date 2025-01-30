@@ -1,0 +1,104 @@
+/* Full-Screen Layout for Body */
+body {
+        display: flex;
+        flex-direction: column; /* Make the body a column layout */
+        min-height: 100vh; /* Ensure it takes the full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+    
+    /* Content Section (Middle Part) */
+    .main-content {
+        flex: 1; /* Push the footer to the bottom when content is smaller than the screen */
+    }
+    
+    /* Footer Container */
+    .footer {
+        background-color: #222; /* Dark background to match navbar */
+        color: #fff; /* White text color */
+        font-family: 'Economica', sans-serif;
+        padding: 1rem 0; /* Remove excessive horizontal padding */
+        width: 100%; /* Stretch footer across the screen */
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Footer Container Layout */
+    .footer-container {
+        display: flex;
+        justify-content: space-between; /* Space between the left, center, and right sections */
+        align-items: center; /* Vertically align items */
+        max-width: 95%; /* Keep content close to edges */
+        margin: 0 auto;
+    }
+    
+    /* Left Section */
+    .footer-left {
+        text-align: left;
+        flex: 1; /* Allow this section to take up available space */
+        padding-left: 1rem; /* Bring text closer to the edge */
+    }
+    
+    .footer-left .footer-logo {
+        font-size: 2.2rem; /* Increased size for logo */
+        font-weight: normal;
+        color: #00ff77; /* Northern lights green for consistency */
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-left p {
+        margin: 0.4rem 0; /* Adjust spacing between lines */
+        font-size: 1.4rem; /* Increased font size */
+    }
+    
+    /* Center Section */
+    .footer-center {
+        text-align: center;
+        flex: 1; /* Ensure center section takes equal space */
+    }
+    
+    .footer-center p {
+        margin: 0.4rem 0;
+        font-size: 1.5rem; /* Increased font size for phone and email */
+    }
+    
+    .footer-center a {
+        color: #fff; /* White text color */
+        text-decoration: none;
+        font-size: 1.5rem; /* Increased font size for email */
+    }
+    
+    .footer-center a:hover {
+        color: #00ff77; /* Hover effect for email */
+        text-decoration: underline;
+    }
+    
+    /* Right Section (Social Media) */
+    .footer-right {
+        text-align: right;
+        display: flex;
+        align-items: center; /* Vertically align icons */
+        gap: 1.2rem; /* Adjusted spacing between icons */
+        flex: 1; /* Allow this section to take up available space */
+        justify-content: flex-end; /* Push icons to the far right */
+    }
+    
+    .footer-social-icon {
+        width: 48px; /* Increased size for social icons */
+        height: 48px;
+        background-color: #fff; /* White background for the icons */
+        border-radius: 50%; /* Circle shape */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .footer-social-icon img {
+        width: 24px; /* Increased size for the icon inside the circle */
+        height: 24px;
+    }
+    
+    .footer-social-icon:hover {
+        transform: scale(1.1); /* Slight zoom effect */
+        background-color: #fff;
+    }
+    

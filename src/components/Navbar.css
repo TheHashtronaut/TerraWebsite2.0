@@ -1,0 +1,77 @@
+/* General Reset */
+body, ul, li, a, img {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    /* Navbar Container */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #222; /* Dark background */
+        color: #fff;
+        font-family: 'Economica', sans-serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Logo Section */
+    .logo a {
+        font-size: 2.2rem; /* Increased font size for logo */
+        font-weight: normal; /* Make TERRA in TERRA STUDIOS bold */
+        color: #00ff77; /* Northern lights green */
+        transition: color 0.3s ease;
+    }
+    
+    .logo a:hover {
+        color: #00f9dc; /* Lighter green for hover */
+    }
+    
+    /* Navigation Links */
+    .nav-links {
+        display: flex;
+        gap: 2.5rem; /* Increased spacing between nav links */
+        margin-left: auto; /* Push nav-links to the right */
+        margin-right: 2rem; /* Add consistent spacing before social-links */
+    }
+    
+    .nav-links li a {
+        color: #fff;
+        font-size: 1.4rem; /* Increased font size for nav links */
+        font-weight: 500; /* Slightly bold for better readability */
+        transition: color 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+        color: #00f9dc;;
+    }
+    
+    /* Social Media Links */
+    .social-links {
+        display: flex;
+        gap: 2rem; /* Ensure even spacing between social media icons */
+    }
+    
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px; /* Increased icon size */
+        height: 40px;
+        background-color: #fff; /* White background for the icons */
+        border-radius: 50%; /* Circle shape */
+        transition: transform 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+    
+    .social-icon {
+        width: 24px; /* Increased size of the icon inside the circle */
+        height: 24px;
+    }
+    

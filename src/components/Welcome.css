@@ -1,0 +1,117 @@
+/* Full-Screen Container */
+.welcome-container {
+        position: relative;
+        width: 100vw; /* Full viewport width */
+        height: calc(100vw * 9 / 21); /* Full viewport height */
+        overflow: hidden; /* Prevent content overflow */
+        display: flex; /* Ensure content can be centered */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+    }
+    
+    /* Full-Screen Video */
+    .welcome-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure video covers the width */
+        height: 100%; /* Ensure video covers the height */
+        object-fit: cover; /* Maintain aspect ratio while covering the screen */
+        /*clip-path: inset(12% 0 12% 0);*/
+        z-index: -1; /* Send video to the background */
+        background-color: #000; /* Fallback background in case video fails to load */
+    }
+    
+    /* Overlay Content */
+    .welcome-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the content */
+        text-align: center;
+        color: #fff; /* White text */
+        font-family: 'Economica', sans-serif;
+        padding: 1rem; /* Add padding to prevent overflow on small screens */
+        z-index: 1; /* Ensure content is above the video */
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    }
+    
+    /* Overlay Heading */
+    .welcome-overlay h1 {
+        font-size: 3rem; /* Larger font for heading */
+        margin-bottom: 1rem;
+        color: #00ff77; /* Northern lights green */
+        animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in animation */
+    }
+    
+    /* Overlay Paragraph */
+    .welcome-overlay p {
+        font-size: 1.5rem;
+        color: #fff;
+        animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+    }
+/* Flexible Section with Image */
+.dynamic-section {
+        position: relative;
+        width: 100%; /* Full width */
+        aspect-ratio: 21 / 9; /* Maintain 21:9 cinematic aspect ratio */
+        overflow: hidden; /* Crop the overflowing image */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4; /* Optional background for separation */
+    }
+    
+    .image-container {
+        position: relative;
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height to match the aspect ratio */
+        overflow: hidden; /* Ensure no overflow */
+    }
+    
+    .dynamic-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Fill the container */
+        height: 100%; /* Fill the container */
+        object-fit: cover; /* Crop and center the image */
+        animation: fadeIn 2s ease-in-out; /* Fade-in animation for the image */
+    }
+    
+    /* Button on Top of Image */
+    .learn-more-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the button on the image */
+        font-family: 'Economica', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: transparent; /* Transparent background */
+        border: 2px solid #fff; /* White border */
+        border-radius: 50px; /* Pill shape */
+        padding: 0.8rem 2rem;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        animation: fadeIn 3s ease-in-out; /* Smooth fade-in animation for the button */
+    }
+    
+    .learn-more-button:hover {
+        background-color: #fff; /* White background on hover */
+        color: #00ff77; /* Green text on hover */
+    }
+        
+    /* Fade-In Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
